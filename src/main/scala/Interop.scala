@@ -4,6 +4,6 @@ import scalaz._
 import Scalaz._
 
 object Interop {
-  val getArticles = defaultRequestArticles _ map (_ getOrElse(null) )
+  val getArticles = defaultRequestArticles _ map (_ getOrElse(null))
 }
 

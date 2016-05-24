@@ -9,6 +9,7 @@ import Scalaz._
 import effect._
 import std._
 import syntax.std._
+import Codecs._
 
 object NyTimes {
   type Key = String

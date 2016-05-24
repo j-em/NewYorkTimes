@@ -24,7 +24,7 @@ object NyTimes {
       ("begin_date", startDate.format(DateTimeFormatter.BASIC_ISO_DATE)),
       ("end_date", endDate.format(DateTimeFormatter.BASIC_ISO_DATE)),
       ("api-key", key),
-      ("page", page.toString)).asString.body.decodeOption[Response].flatMap(_.response).flatMap(_.docs)
+      ("page", page.toString)).asString.body.decodeOption[Response].>>= (_.response).>>= (_.docs)
 
   def getArticles(query: String, startDate: LocalDate, endDate: LocalDate, page: Int = 0, f: ArticleFetcher = defaultRequestArticles: ArticleFetcher): Reader[String, ArticleIO] =
     Reader((key: String) => IO(f(key, query,  startDate, endDate, page)))

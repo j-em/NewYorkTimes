@@ -2,14 +2,13 @@ package jem.nytimes
 import scalaj.http._
 import argonaut._, Argonaut._
 import Article._
-import java.time._
-import format._
 import scalaz._
 import Scalaz._
 import effect._
 import std._
 import syntax.std._
 import Codecs._
+import org.joda.time._
 
 object NyTimes {
   type Key = String
@@ -21,8 +20,8 @@ object NyTimes {
   def defaultRequestArticles(key: String, query: String, startDate: LocalDate, endDate: LocalDate, page: Int = 0): Option[List[Article]] =
     Http("https://api.nytimes.com/svc/search/v2/articlesearch.json").params(
       ("q", query),
-      ("begin_date", startDate.format(DateTimeFormatter.BASIC_ISO_DATE)),
-      ("end_date", endDate.format(DateTimeFormatter.BASIC_ISO_DATE)),
+      ("begin_date", startDate.toString("yyyMMdd")),
+      ("end_date", endDate.toString("yyyMMdd")),
       ("api-key", key),
       ("page", page.toString)).asString.body.decodeOption[Response].>>= (_.response).>>= (_.docs)
 

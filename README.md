@@ -21,7 +21,7 @@
   Then, add the dependency.
   ```
   dependencies {
-        compile 'com.github.j-em:NewYorkTimes:2.0.0'
+        compile 'com.github.j-em:NewYorkTimes:3.0.0'
     }       
   ```
 

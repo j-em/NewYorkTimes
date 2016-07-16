@@ -38,3 +38,9 @@ import jem.nytimes.Interop.getArticles
 val page = 0
 getArticles("apikey", "myquery", LocalDate(2001, 9, 20), LocalDate(2001, 9, 20), page)
 ```
+
+## Build
+Running this in a shell should be enough.
+```
+$ sbt package
+```

@@ -28,7 +28,11 @@
 ## Usage
 ### Scala 
 ``` 
+// Get a list of articles from the 2001/09/20 with "myquery" in the body, headline or byline.
 getArticles("myquery", LocalDate(2001, 9, 20), LocalDate(2001, 9, 20)).run("apikey")
+
+// Get a list of articles from the 2001/09/20 to the 2001/09/24 with "animals" in the body, headline or byline.
+getArticles("animals", LocalDate(2001, 9, 20), LocalDate(2001, 9, 24)).run("apikey")
 ```
 
 ### Kotlin

@@ -48,3 +48,7 @@ Running this in a shell should be enough.
 ```
 $ sbt package
 ```
+
+## Technologies
+- [scalaz](https://github.com/scalaz/scalaz)
+- [scalaj-http](https://github.com/scalaj/scalaj-http)

@@ -10,7 +10,7 @@
   
 ### Gradle
   Add this in your root build.gradle file at the end of the repositories.
-  ```
+  ```groovy
   allprojects {
 		repositories {
 			maven { url "https://jitpack.io" }
@@ -19,7 +19,7 @@
   ```
 
   Then, add the dependency.
-  ```
+  ```groovy
   dependencies {
         compile 'com.github.j-em:NewYorkTimes:3.0.0'
     }       
@@ -27,7 +27,7 @@
 
 ## Usage
 ### Scala 
-``` 
+```scala
 // Get a list of articles from the 2001/09/20 with "myquery" in the body, headline or byline.
 getArticles("myquery", LocalDate(2001, 9, 20), LocalDate(2001, 9, 20)).run("apikey")
 
@@ -36,7 +36,7 @@ getArticles("animals", LocalDate(2001, 9, 20), LocalDate(2001, 9, 24)).run("apik
 ```
 
 ### Kotlin
-```
+```kotlin
 import jem.nytimes.Interop.getArticles
 
 val page = 0

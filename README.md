@@ -47,7 +47,7 @@ getArticles("apikey", "myquery", LocalDate(2001, 9, 20), LocalDate(2001, 9, 20),
 ```
 
 ### Other JVM languages
-The [Interop](http://j-em.xyz/NewYorkTimes/#jem.nytimes.Interop$) object contains (unsafe) methods that makes it easier to interact with the library outside of Scala. Optionals are automatically unwrapped and the usage of Monads is hidden.
+The [Interop](http://j-em.xyz/NewYorkTimes/#jem.nytimes.Interop$) object contains (unsafe) methods that makes it easier to interact with the library outside of Scala. Optionals are automatically unwrapped, the usage of Monads is hidden and the return type is a standard java list.
 
 ## Build
 Running this in a shell should be enough.

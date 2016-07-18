@@ -26,6 +26,9 @@
   ```
 
 ## Usage
+### Android
+ Should work OOTB on Android with multidex enabled builds.
+ 
 ### Scala 
 ``` 
 // Get a list of articles from the 2001/09/20 with "myquery" in the body, headline or byline.

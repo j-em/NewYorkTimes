@@ -28,7 +28,7 @@
 ## Usage
 ### Android
  Should work OOTB on Android with multidex enabled builds.
- 
+
 ### Scala 
 ``` 
 // Get a list of articles from the 2001/09/20 with "myquery" in the body, headline or byline.
@@ -45,6 +45,9 @@ import jem.nytimes.Interop.getArticles
 val page = 0
 getArticles("apikey", "myquery", LocalDate(2001, 9, 20), LocalDate(2001, 9, 20), page)
 ```
+
+### Other JVM languages
+The [Interop](http://j-em.xyz/NewYorkTimes/#jem.nytimes.Interop$) object contains (unsafe) methods that makes it easier to interact with the library outside of Scala. Optionals are automatically unwrapped and the usage of Monads is hidden.
 
 ## Build
 Running this in a shell should be enough.

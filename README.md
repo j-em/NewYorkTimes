@@ -6,7 +6,7 @@
   The complete API reference can be found [here](https://j-em.github.io/NewYorkTimes).
 
 ## Installation
-  The library is hosted on [jitpack](https://jitpack.io).
+  The library is hosted on [jitpack](https://jitpack.io/#j-em/NewYorkTimes).
   
 ### Gradle
   Add this in your root build.gradle file at the end of the repositories.

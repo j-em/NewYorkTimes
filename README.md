@@ -10,7 +10,7 @@
   
 ### Gradle
   Add this in your root build.gradle file at the end of the repositories.
-  ```
+  ```groovy
   allprojects {
 		repositories {
 			maven { url "https://jitpack.io" }
@@ -19,7 +19,7 @@
   ```
 
   Then, add the dependency.
-  ```
+  ```groovy
   dependencies {
         compile 'com.github.j-em:NewYorkTimes:3.0.0'
     }       
@@ -30,7 +30,7 @@
  Should work OOTB on Android with multidex enabled builds.
 
 ### Scala 
-``` 
+```scala
 // Get a list of articles from the 2001/09/20 with "myquery" in the body, headline or byline.
 getArticles("myquery", LocalDate(2001, 9, 20), LocalDate(2001, 9, 20)).run("apikey")
 
@@ -39,7 +39,7 @@ getArticles("animals", LocalDate(2001, 9, 20), LocalDate(2001, 9, 24)).run("apik
 ```
 
 ### Kotlin
-```
+```kotlin
 import jem.nytimes.Interop.getArticles
 
 val page = 0
@@ -54,7 +54,6 @@ Running this in a shell should be enough.
 ```
 $ sbt package
 ```
-
 ## Technologies
 - [scalaz](https://github.com/scalaz/scalaz)
 - [scalaj-http](https://github.com/scalaj/scalaj-http)
